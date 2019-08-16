@@ -1,0 +1,30 @@
+{
+  "name": "bamazon",
+  "version": "1.0.0",
+  "description": "Mock Version of Amazon using CLI and MySQL",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/krenaldi/bamazon.git"
+  },
+  "keywords": [
+    "MySQL",
+    "Node",
+    "CLI",
+    "Inquirer",
+    "JavaScript"
+  ],
+  "author": "Kris Renaldi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/krenaldi/bamazon/issues"
+  },
+  "homepage": "https://github.com/krenaldi/bamazon#readme",
+  "dependencies": {
+    "inquirer": "^6.5.1",
+    "mysql": "^2.17.1"
+  }
+}
