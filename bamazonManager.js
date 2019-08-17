@@ -109,10 +109,11 @@ function addInv() {
             connection.query("SELECT * FROM products WHERE ?",
                 { item_id: item }, function (err, results) {
 
-                    connection.query("UPDATE products SET stock_quantity = " + (results[0].stock_quantity + quantity) + " WHERE ?",
-                            {
+                    connection.query("UPDATE products SET stock_quantity = stock_quantity + ? WHERE ?",
+                            [quantity,
+                                {
                                 item_id: item
-                            },
+                            }],
                         function (err, results) {
                             if (err) throw err;
                             console.log("Inventory for increased by " + quantity);
