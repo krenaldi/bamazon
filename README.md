@@ -38,3 +38,35 @@ Once the customer has placed the order, your application should check if your st
 If the store _does_ have enough of the product, the customer's order is fulfilled and updates the SQL database to reflect the remaining quantity and shows the customer the total cost of their purchase.
 
 ![Image of mysql db screenshot] (./images/mysql-screenshot1.png)
+
+### 2. Manager View
+
+A new Node application called `bamazonManager.js` that lists a set of menu options:
+
+* View Products for Sale
+
+* View Low Inventory
+
+* Add to Inventory
+
+* Add New Product
+
+* Exit
+
+![Image of 3rd screenshot] (./images/bamazon-screenshot3.png)
+
+If a manager selects `View Products for Sale`, the app should list every available item: the item IDs, names, prices, and quantities.
+
+![Image of 4th screenshot] (./images/bamazon-screenshot4.png)
+
+If a manager selects `View Low Inventory`, then it should list all items with an inventory count lower than five.
+
+![Image of 5th screenshot] (./images/bamazon-screenshot5.png)
+
+If a manager selects `Add to Inventory`, your app should display a prompt that will let the manager "add more" of any item currently in the store.
+
+
+
+If a manager selects `Add New Product`, it should allow the manager to add a completely new product to the store.
+
+![Image of 7th screenshot] (./images/bamazon-screenshot7.png)
