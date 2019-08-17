@@ -22,7 +22,7 @@ MySQL database called `bamazon` created with table inside called `products`. The
 
 Customer runs a Node app called `bamazonCustomer.js` which first displays all of the items available for sale minus the stock quantity. 
 
-![Image of first screenshot] (./images/bamazon-screenshot1.png)
+![Image of first screenshot] (https://github.com/krenaldi/bamazon/blob/master/images/bamazon-screenshot1.png)
 
 The app then prompts users with two messages.
 
@@ -33,11 +33,11 @@ Once the customer has placed the order, your application should check if your st
 
 * If not, the app should log a phrase like `Insufficient quantity!`, and then prevent the order from going through.
 
-![Image of 2nd screenshot] (./images/bamazon-screenshot2.png)
+![Image of 2nd screenshot] (https://github.com/krenaldi/bamazon/blob/master/images/bamazon-screenshot2.png)
 
 If the store _does_ have enough of the product, the customer's order is fulfilled and updates the SQL database to reflect the remaining quantity and shows the customer the total cost of their purchase.
 
-![Image of mysql db screenshot] (./images/mysql-screenshot1.png)
+![Image of mysql db screenshot] (https://github.com/krenaldi/bamazon/blob/master/images/mysql-screenshot1.png)
 
 ### 2. Manager View
 
@@ -53,15 +53,15 @@ A new Node application called `bamazonManager.js` that lists a set of menu optio
 
 * Exit
 
-![Image of 3rd screenshot] (./images/bamazon-screenshot3.png)
+![Image of 3rd screenshot] (https://github.com/krenaldi/bamazon/blob/master/images/bamazon-screenshot3.png)
 
 If a manager selects `View Products for Sale`, the app should list every available item: the item IDs, names, prices, and quantities.
 
-![Image of 4th screenshot] (./images/bamazon-screenshot4.png)
+![Image of 4th screenshot] (https://github.com/krenaldi/bamazon/blob/master/images/bamazon-screenshot4.png)
 
 If a manager selects `View Low Inventory`, then it should list all items with an inventory count lower than five.
 
-![Image of 5th screenshot] (./images/bamazon-screenshot5.png)
+![Image of 5th screenshot] (https://github.com/krenaldi/bamazon/blob/master/images/bamazon-screenshot5.png)
 
 If a manager selects `Add to Inventory`, your app should display a prompt that will let the manager "add more" of any item currently in the store.
 
@@ -69,4 +69,4 @@ If a manager selects `Add to Inventory`, your app should display a prompt that w
 
 If a manager selects `Add New Product`, it should allow the manager to add a completely new product to the store.
 
-![Image of 7th screenshot] (./images/bamazon-screenshot7.png)
+![Image of 7th screenshot] (https://github.com/krenaldi/bamazon/blob/master/images/bamazon-screenshot7.png)
