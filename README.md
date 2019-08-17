@@ -22,13 +22,7 @@ MySQL database called `bamazon` created with table inside called `products`. The
 
 Customer runs a Node app called `bamazonCustomer.js` which first displays all of the items available for sale minus the stock quantity. 
 
-<<<<<<< HEAD
 [![Image of first screenshot](https://github.com/krenaldi/bamazon/blob/master/images/bamazon-screenshot1.png)]
-||||||| merged common ancestors
-![Image of first screenshot] (https://github.com/krenaldi/bamazon/blob/master/images/bamazon-screenshot1.png)
-=======
-![Image of first screenshot] (https://github.com/krenaldi/bamazon/images/bamazon-screenshot1.png)
->>>>>>> 6d7af5d6ee5bfb43492b7c89e6fb9da64c05a38c
 
 The app then prompts users with two messages.
 
