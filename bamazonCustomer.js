@@ -1,6 +1,6 @@
 var mysql = require("mysql");
 var inquirer = require("inquirer");
-require("dotenv").config();
+
 
 
 var connection = mysql.createConnection({
@@ -63,6 +63,7 @@ function placeOrder() {
             // variables for user inputs
             var item = answer.item_id;
             var quantity = answer.quantity;
+            //var totalCost = 0;
 
             // Query db for all products
             connection.query("SELECT * FROM products WHERE ?", { item_id: item }, function (err, results) {
@@ -70,18 +71,18 @@ function placeOrder() {
                 // determine if stock is available for number of purchases
                 if (quantity <= results[0].stock_quantity) {
                     connection.query(
-                        "UPDATE products SET ? WHERE ?",
+                        "UPDATE products SET stock_quantity = ?, product_sales = product_sales + ? WHERE ?",
                         [
-                            {
-                                stock_quantity: results[0].stock_quantity - quantity
-                            },
+                            results[0].stock_quantity - quantity,
+                            results[0].price * quantity,
                             {
                                 item_id: item
                             }
                         ],
                         function (err) {
                             if (err) throw err;
-                            console.log("Order placed successfully! Total cost of purchase is $" + results[0].price * quantity + "\n-----------------------------\n");
+                            //var totalCost = results[0].price * quantity;
+                            console.log("Order placed successfully! Total cost of purchase(s) is $" + results[0].price * quantity + "\n-----------------------------\n");
                             inquirer.prompt({
                                 name: "action",
                                 type: "list",

@@ -4,6 +4,21 @@ CREATE DATABASE bamazon_db;
 
 USE bamazon_db;
 
+CREATE TABLE departments (
+department_id INT NOT NULL,
+department_name VARCHAR(50) NOT NULL,
+over_head_costs DECIMAL(6,2) NOT NULL
+);
+
+INSERT INTO departments (department_id, department_name, over_head_costs)
+VALUES (01, "Books", 35),
+(02, "DVDs", 35),
+(03, "Video Games", 125),
+(04, "Pet Supplies", 35),
+(05, "Electronics", 500),
+(06, "Music", 35),
+(07, "Computers", 1000);
+
 CREATE TABLE products (
 item_id INT AUTO_INCREMENT PRIMARY KEY,
 product_name VARCHAR(50) NOT NULL,
@@ -25,3 +40,9 @@ VALUES ("How To Code", "Books", 9.99, 25),
 ("The Ramones Collection", "Music", 39.99, 15);
 
 SELECT * FROM products;
+
+UPDATE products
+SET stock_quantity = 8
+WHERE item_id = 5;
+
+
