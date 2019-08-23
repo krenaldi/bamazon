@@ -70,3 +70,25 @@ If a manager selects `Add to Inventory`, your app should display a prompt that w
 If a manager selects `Add New Product`, it should allow the manager to add a completely new product to the store.
 
 [![Image of 7th screenshot](https://github.com/krenaldi/bamazon/blob/master/images/bamazon-screenshot7.png)]
+
+### 3. Supervisor View
+
+A new Node application called `bamazonSupervisor.js` that lists a set of menu options:
+
+* View Product Sales by Department
+
+* Create New Department
+
+* Exit
+
+[![Image of 8th screenshot](https://github.com/krenaldi/bamazon/blob/master/images/bamazon-screenshot8.png)]
+
+When a supervisor selects `View Product Sales by Department`, the app will display the following summarized table in their terminal/bash window based on a new table called `departments` created in the bamazon schema.
+
+[![Image of 9th screenshot](https://github.com/krenaldi/bamazon/blob/master/images/bamazon-screenshot9.png)]
+
+The `total_profit` column is a customer aliias and is calculated on the fly using the difference between `over_head_costs` and `product_sales` by joining the `departments` and `products` table and ordering the table by Department ID.
+
+The  `Create New Department` option allows the supervisor to add a new department much in the same way that the manager can add a new product in the `bamazonManager.js` app.
+
+[![Image of 10th screenshot](https://github.com/krenaldi/bamazon/blob/master/images/bamazon-screenshot10.png)]
