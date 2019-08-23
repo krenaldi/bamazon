@@ -20,7 +20,7 @@ var connection = mysql.createConnection({
 // connect to the mysql server
 connection.connect(function (err) {
     if (err) throw err;
-    console.log("connected as id " + connection.threadId + "\n");
+    //console.log("connected as id " + connection.threadId + "\n");
     // Run function after the connection that starts the prompt for the user
     viewDepartments();
 });
@@ -90,5 +90,13 @@ function createDept() {
             console.table(results);
             viewDepartments();
         });
+    });
+}
+
+function viewDeptSales() {
+    connection.query("SELECT departments.department_id AS 'Department ID', departments.department_name AS 'Department Name', departments.over_head_costs AS 'Overhead Costs', SUM(products.product_sales) AS 'Product Sales', (SUM(products.product_sales) - departments.over_head_costs) AS 'Total Profit' FROM departments LEFT JOIN products ON products.department_name = departments.department_name GROUP BY departments.department_name, departments.department_id, departments.over_head_costs ORDER BY departments.department_id ASC", function (err, results) {
+        if (err) throw err;
+        console.table(results);
+        viewDepartments();
     });
 }
