@@ -65,7 +65,7 @@ function viewInventory() {
 }
 
 function viewProducts() {
-    connection.query("SELECT item_id, product_name, price, stock_quantity FROM products", function (err, res) {
+    connection.query("SELECT item_id AS 'ID', product_name AS 'Product', price AS 'Price', stock_quantity AS 'Inventory' FROM products", function (err, res) {
         if (err) throw err;
         console.table(res);
         viewInventory();
@@ -73,7 +73,7 @@ function viewProducts() {
 }
 
 function viewLowInv() {
-    connection.query("SELECT item_id, product_name, stock_quantity FROM products WHERE stock_quantity < 5", function (err, res) {
+    connection.query("SELECT item_id AS 'ID', product_name AS 'Product', stock_quantity AS 'Inventory' FROM products WHERE stock_quantity < 5", function (err, res) {
         if (err) throw err;
         console.table(res);
         viewInventory();

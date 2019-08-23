@@ -28,7 +28,7 @@ connection.connect(function (err) {
 });
 
 function displayProducts() {
-    connection.query("SELECT item_id, product_name, price FROM products", function (err, results) {
+    connection.query("SELECT item_id AS 'ID', product_name AS 'Product', price AS 'Price' FROM products", function (err, results) {
         if (err) throw err;
         console.table(results);
         placeOrder();
@@ -107,7 +107,7 @@ function placeOrder() {
                 }
                 else {
                     // if there isn't enough stock for number of purchases, tell user order cannot be placed
-                    console.log("Sorry but there is in sufficient stock for your order. Please select a lower number items.");
+                    console.log("Sorry but there is in sufficient stock for your order. Please select a lower number of items.");
                     displayProducts();
                 }
             });
